@@ -1,0 +1,122 @@
+# 1) write a function that finds sum of the
+# a) first n odd terms
+
+no = int(input("Enter a no: "))
+sum = 0
+curr = 1
+i = 0
+while i < no:
+    sum = sum + curr
+    curr = curr + 2
+    i = i + 1
+print(sum)
+
+# b) first n even terms
+
+no = int(input("Enter a no: "))
+sum = 0
+curr = 2
+i = 0
+while i < no:
+    sum = sum + curr
+    curr = curr + 2
+    i = i + 1
+print(sum)
+
+# c) all the terms
+
+no = int(input("Enter a no: "))
+sum = 0
+curr = 1
+i = 0
+while i < no:
+    sum = sum + curr
+    curr = curr + 1
+    i = i + 1
+print(sum)
+
+# 2) Consider a tuple t1=(1,2,5,7,9,2,4,6,8,10). Write a program to perform following operations:
+# a) Print half the values of tuple in one line and the other half in the next line.
+
+t1=(1,2,5,7,9,2,4,6,8,10)
+
+# printing the first half numbers
+t1a = t1[:5]
+print(f"The first half is {t1a})
+
+#printing the last half numbers
+t1b = t1[5:]
+print(f"The last half is {t1b}")
+
+# b) Print another tuple whose values are even numbers in the given tuple.
+
+t1 = (1,2,5,7,9,2,4,6,8,10)
+t2 = list()
+
+for i in t1:
+    if i % 2 == 0:
+        t2.append(i)
+
+t2 = (tuple(t2))
+print(f"Tuple with even terms of t1 is {t2}")
+    
+# c) Concatenate a tuple t2=(11,13,15) with t1.
+
+t1 = (1,2,5,7,9,2,4,6,8,10)
+t2 = (11,13,15)
+
+concatenate = t1 + t2
+print(f"tuple after contatenation is {concatenate}")
+
+# d) Return maximum and minimum value from this tuple.
+
+t1 = (1,2,5,7,9,2,4,6,8,10)
+
+t1max = max(t1)
+print(f"The maximum value of t1 is {t1max}")
+
+t1min = min(t1)
+print(f"The minimum value of t1 is {t1min}")
+
+# 3) Write a menu driven program to perform the following functions on strings:
+# a) Find the length of string
+
+string = input("Enter the word: ")
+
+lenstr = len(string)
+print(lenstr)
+
+# b) Return maximum of three strings
+string1 = input("Enter the word: ")
+string2 = input("Enter the word: ")
+string3 = input("Enter the word: ")
+
+print(str1 = max(string1))
+print(str2 = max(string2))
+print(str3 = max(string3))
+
+# c) Accept a string and replace every successive character with ‘#’ Example- For Given string ‘Hello World’ returned string is ‘H#l#o W#r#d’.
+string = input("Enter the word: ")
+result = ''
+c = 0
+
+for letter in string:
+    if letter == ' ':
+        result += ' '
+        c += 1
+    elif c % 2:
+        result += "#"
+        c += 1
+    else:
+        result += letter
+        c += 1
+print(result)
+
+# d) Find number of words in the given string
+string = input("Enter the word: ")
+no = 0
+for i in string:
+    if i.isalpha():
+        no += 1
+    
+print(f"Total no of words is {no}) 
